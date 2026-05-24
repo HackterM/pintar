@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("PINTAR", style: TextStyle(fontWeight: FontWeight.bold)),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      body: const Center(
+        child: Text(
+          "Selamat Datang di PINTAR\n\nHome Screen akan dikembangkan",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20, color: Colors.white70),
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color(0xFF0A2540),
+        selectedItemColor: const Color(0xFF00F5FF),
+        unselectedItemColor: Colors.white54,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.language), label: "Bahasa"),
+          BottomNavigationBarItem(icon: Icon(Icons.chat), label: "AI Tutor"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profil"),
+        ],
+      ),
+    );
+  }
+}
